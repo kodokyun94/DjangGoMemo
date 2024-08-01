@@ -17,11 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from djangoProject.views import main, main2
+from djangoProject.views import main, main2,burger_list,lunchMenu_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # main 은 views(컨트롤러 역할)의 main함수
     path('main/',main),
-    path('main2/',main2)
+    path('main2/',main2),
+    path('list/',burger_list),
+    path('menu/',lunchMenu_list)
 ]
